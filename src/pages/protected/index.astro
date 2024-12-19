@@ -1,0 +1,12 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const user = await Astro.locals.currentUser();
+---
+
+<Layout>
+    <div>Hey, {user?.fullName}.</div>
+    <div>Auth Status: {Astro.locals.authStatus}</div>
+    <div>Auth Reason: {Astro.locals.authReason}</div>
+    <div>Auth Message: {Astro.locals.authMessage}</div>
+</Layout>

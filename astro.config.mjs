@@ -2,9 +2,10 @@
 import { defineConfig, envField } from 'astro/config';
 import clerk from "@clerk/astro";
 import netlify from "@astrojs/netlify";
+import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-    integrations: [clerk()],
+    integrations: [clerk(), tailwind()],
 
     env: {
         schema: {

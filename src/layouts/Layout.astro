@@ -1,5 +1,10 @@
 ---
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/astro/components';
+import {
+	SignedIn,
+	SignedOut,
+	SignInButton,
+	UserButton,
+} from "@clerk/astro/components";
 ---
 
 <!doctype html>
@@ -11,14 +16,14 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/astro/comp
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body>
-		<nav>
+	<body class="font-sans bg-white text-black p-4">
+		<nav class="w-full">
 			<SignedOut>
 				<SignInButton mode="modal" />
-			  </SignedOut>
-			  <SignedIn>
+			</SignedOut>
+			<SignedIn>
 				<UserButton />
-			  </SignedIn>
+			</SignedIn>
 		</nav>
 		<slot />
 	</body>
